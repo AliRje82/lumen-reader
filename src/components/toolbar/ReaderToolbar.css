@@ -1,0 +1,151 @@
+.reader-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--toolbar-height);
+  padding: 6px var(--space-3);
+  padding-top: calc(6px + var(--safe-top));
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+  z-index: 20;
+  flex-shrink: 0;
+}
+
+.reader-toolbar.minimal {
+  justify-content: space-between;
+  opacity: 0.85;
+}
+
+.tb-left,
+.tb-center,
+.tb-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.tb-left {
+  flex: 1;
+}
+
+.tb-center {
+  flex: 0 0 auto;
+  padding: 2px;
+  background: var(--bg-sunken);
+  border-radius: var(--radius-md);
+}
+
+.tb-right {
+  flex: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.doc-title-block {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.doc-title {
+  margin: 0;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+.color-row {
+  display: flex;
+  gap: 3px;
+  padding: 0 6px;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  margin: 0 2px;
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.color-dot.active {
+  border-color: var(--text);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px;
+  background: var(--bg-sunken);
+  border-radius: var(--radius-md);
+  min-width: 0;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  min-height: 32px;
+  width: 140px;
+  padding: 0;
+  box-shadow: none !important;
+}
+
+.search-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.page-indicator {
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  min-width: 4.5rem;
+  text-align: center;
+}
+
+.sync-btn {
+  min-height: 32px;
+  padding: 0 12px;
+}
+
+@media (max-width: 1100px) {
+  .tb-center {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .reader-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .doc-title {
+    max-width: 140px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .tb-right .btn-icon.sm:nth-child(n + 8) {
+    display: none;
+  }
+}

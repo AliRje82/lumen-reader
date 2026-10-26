@@ -1,0 +1,129 @@
+:root {
+  /* Brand */
+  --brand: #2d6a4f;
+  --brand-hover: #1b4332;
+  --brand-muted: #d8f3dc;
+  --brand-contrast: #ffffff;
+
+  /* Surfaces — light */
+  --bg: #f7f5f2;
+  --bg-elevated: #ffffff;
+  --bg-sunken: #efece6;
+  --bg-overlay: rgba(15, 18, 25, 0.45);
+  --border: rgba(26, 31, 46, 0.1);
+  --border-strong: rgba(26, 31, 46, 0.18);
+
+  /* Text */
+  --text: #1a1f2e;
+  --text-secondary: #5c6478;
+  --text-muted: #8b93a7;
+  --text-inverse: #f7f5f2;
+
+  /* Accents */
+  --accent: #2d6a4f;
+  --accent-soft: rgba(45, 106, 79, 0.12);
+  --danger: #c0392b;
+  --danger-soft: rgba(192, 57, 43, 0.12);
+  --warning: #d68910;
+  --success: #1e8449;
+  --info: #2471a3;
+
+  /* Highlight palette */
+  --hl-yellow: #f5d76e;
+  --hl-green: #7dcea0;
+  --hl-blue: #85c1e9;
+  --hl-pink: #f5b7b1;
+  --hl-orange: #f0b27a;
+  --hl-purple: #d2b4de;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(26, 31, 46, 0.06);
+  --shadow-md: 0 4px 16px rgba(26, 31, 46, 0.08), 0 1px 3px rgba(26, 31, 46, 0.04);
+  --shadow-lg: 0 12px 40px rgba(26, 31, 46, 0.14);
+
+  /* Typography */
+  --font-sans: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-md: 0.9375rem;
+  --fs-lg: 1.0625rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 2rem;
+
+  --lh-tight: 1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.65;
+
+  /* Spacing & layout */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --sidebar-width: 280px;
+  --panel-width: 300px;
+  --toolbar-height: 52px;
+  --mobile-bar-height: 56px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
+
+  --focus-ring: 0 0 0 2px var(--bg-elevated), 0 0 0 4px var(--brand);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 180ms;
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --brand: #52b788;
+  --brand-hover: #74c69d;
+  --brand-muted: #1b4332;
+  --brand-contrast: #0f1219;
+
+  --bg: #0f1219;
+  --bg-elevated: #1a1f2e;
+  --bg-sunken: #0a0c12;
+  --bg-overlay: rgba(0, 0, 0, 0.55);
+  --border: rgba(247, 245, 242, 0.08);
+  --border-strong: rgba(247, 245, 242, 0.14);
+
+  --text: #f0eee9;
+  --text-secondary: #a8b0c0;
+  --text-muted: #6b7388;
+  --text-inverse: #1a1f2e;
+
+  --accent: #52b788;
+  --accent-soft: rgba(82, 183, 136, 0.16);
+  --danger: #e74c3c;
+  --danger-soft: rgba(231, 76, 60, 0.16);
+  --warning: #f39c12;
+  --success: #2ecc71;
+  --info: #5dade2;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.45);
+
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration: 0ms;
+  }
+}
